@@ -1,0 +1,198 @@
+/* Descktop */
+@media only screen and (min-width: 769px) and (max-width: 2000px) {
+  .contentDivs {
+    display: flex;
+    flex-direction: row;
+  }
+  .divOne {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
+  .title {
+    font-family: facultadregular, Georgia, sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid orange;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    animation: typing 1s steps(40), blink-caret 0.5s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .subtitle {
+    font-family: facultadregular, Georgia, sans-serif;
+    margin-top: 25px;
+    font-size: 1.5rem;
+  }
+  .subtitleDos {
+    font-family: facultadregular, Georgia, sans-serif;
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  .divTwo {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
+  }
+  .divTwo img {
+    width: 726px;
+    margin-top: -30px;
+    height: 647px;
+  }
+  .buttonKnowMore {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 4px 8px;
+    color: black;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  .buttonKnowMore:hover {
+    background-color: orange;
+    opacity: 0.8;
+    font-weight: 600;
+    color: #ffffff;
+  }
+}
+
+/* mobile */
+@media only screen and (min-width: 360px) and (max-width: 769px) {
+  .contentDivs {
+    display: flex;
+    flex-direction: column;
+  }
+  .divOne {
+    /* width: 50%;
+    position: absolute;
+    top: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+  .title {
+    font-family: facultadregular, Georgia, sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid orange;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+    position: absolute;
+    width: 226px;
+    left: 20px;
+    animation: typing 1s steps(40), blink-caret 0.5s step-end infinite;
+    top: 413px;
+    font-size: 0.7rem;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .subtitle {
+    font-family: facultadregular, Georgia, sans-serif;
+    margin-top: 25px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .subtitleDos {
+    font-family: facultadregular, Georgia, sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0 5px;
+  }
+
+  .divTwo img {
+    height: auto;
+    width: 755px;
+  }
+
+  .buttonKnowMore {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 4px 8px;
+    color: black;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  .buttonKnowMore:hover {
+    background-color: orange;
+    opacity: 0.8;
+    font-weight: 600;
+    color: #ffffff;
+  }
+}
