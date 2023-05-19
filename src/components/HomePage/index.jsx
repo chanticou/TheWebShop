@@ -4,13 +4,14 @@ import "aos/dist/aos.css";
 import "animate.css";
 import styles from "@/styles/HomePage.module.css";
 
-export const HomePage = ({ navbar, changeLanguaje }) => {
+export const HomePage = ({ navbar, changeLanguaje, nosotrosRef }) => {
   const [languajes, setLanguajes] = useState({});
   const [title, setTitle] = useState("");
 
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    AOS.init(); // Inicializar la biblioteca AOS
     if (languajes) {
       const titleText = `${changeLanguaje.customWebsites}`;
       let i = 0;
@@ -78,7 +79,9 @@ export const HomePage = ({ navbar, changeLanguaje }) => {
       </div>
 
       <div id="about" ref={sectionRef} style={{ marginTop: "600px" }}>
+        <div ref={nosotrosRef}></div>
         <h2>Nosotros</h2>
+
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis,
           rerum? Cumque aliquid perspiciatis minima vitae quasi sequi deserunt

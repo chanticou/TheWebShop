@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HomePage } from "../HomePage";
 import styles from "@/styles/NavBar.module.css";
 import "tailwindcss/tailwind.css";
 
 export const NavBar = () => {
+  const nosotrosRef = useRef(null);
   // Traducciones en diferentes idiomas
   const translations = {
     es: {
@@ -79,7 +80,7 @@ export const NavBar = () => {
       }
     }
   };
-  // console.log(changeLanguaje);
+
   return (
     <>
       <div>
@@ -111,16 +112,35 @@ export const NavBar = () => {
                 }`}
               >
                 <ul className="p-0 md:h-auto items-center justify-justify-between md:flex ">
-                  <li className="text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                    {/* <Link href="#about" onClick={() => setNavbar(!navbar)}> */}
-                    {changeLanguaje.us}
-                    {/* </Link> */}
-                  </li>
-                  <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                    <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                      {changeLanguaje.blogs}
-                    </Link>
-                  </li>
+                  <div className={styles.contentLi}>
+                    <li
+                      className="text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent"
+                      onClick={() => {
+                        nosotrosRef.current.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }}
+                    >
+                      {changeLanguaje.us}
+                    </li>
+                  </div>
+                  <div className={styles.contentLi}>
+                    <li
+                      className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent"
+                      onClick={() => {
+                        setNavbar(!navbar);
+                        nosotrosRef.current.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }}
+                    >
+                      <Link href="#blog" onClick={() => setNavbar(!navbar)}>
+                        {changeLanguaje.blogs}
+                      </Link>
+                    </li>
+                  </div>
                   <Link href="/">
                     <Image
                       className="m-auto hidden md:block"
@@ -130,16 +150,20 @@ export const NavBar = () => {
                       alt="logo"
                     />
                   </Link>
-                  <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                    <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                      {changeLanguaje.contact}
-                    </Link>
-                  </li>
-                  <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                    <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                      {changeLanguaje.proyect}
-                    </Link>
-                  </li>
+                  <div className={styles.contentLi}>
+                    <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                      <Link href="#contact" onClick={() => setNavbar(!navbar)}>
+                        {changeLanguaje.contact}
+                      </Link>
+                    </li>
+                  </div>
+                  <div className={styles.contentLi}>
+                    <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                      <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                        {changeLanguaje.proyect}
+                      </Link>
+                    </li>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -165,7 +189,11 @@ export const NavBar = () => {
             </div>
           </div>
         </nav>
-        <HomePage navbar={navbar} changeLanguaje={changeLanguaje} />
+        <HomePage
+          navbar={navbar}
+          changeLanguaje={changeLanguaje}
+          nosotrosRef={nosotrosRef}
+        />
       </div>
     </>
   );
