@@ -1,0 +1,54 @@
+.contentdivs {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 620px;
+}
+
+.contentCards {
+  width: 400px;
+  color: rgb(70, 70, 70);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 0;
+  transform: translateZ(0);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.contentCards:hover {
+  transform: perspective(1000px) translateZ(80px);
+}
+
+.title {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+  width: 350px;
+}
+.contentIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 50%;
+}
+
+.icon {
+  font-size: 2rem;
+  color: rgb(43, 94, 94);
+}

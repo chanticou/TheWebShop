@@ -122,7 +122,7 @@ export const NavBar = () => {
                         });
                       }}
                     >
-                      {changeLanguaje.us}
+                      <div data-aos="fade-right">{changeLanguaje.us}</div>
                     </li>
                   </div>
                   <div className={styles.contentLi}>
@@ -137,7 +137,7 @@ export const NavBar = () => {
                       }}
                     >
                       <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                        {changeLanguaje.blogs}
+                        <div data-aos="fade-right"> {changeLanguaje.blogs}</div>
                       </Link>
                     </li>
                   </div>
@@ -153,14 +153,17 @@ export const NavBar = () => {
                   <div className={styles.contentLi}>
                     <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                       <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                        {changeLanguaje.contact}
+                        <div data-aos="fade-left">{changeLanguaje.contact}</div>
                       </Link>
                     </li>
                   </div>
                   <div className={styles.contentLi}>
                     <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                       <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                        {changeLanguaje.proyect}
+                        <div data-aos="fade-left">
+                          {" "}
+                          {changeLanguaje.proyect}
+                        </div>
                       </Link>
                     </li>
                   </div>

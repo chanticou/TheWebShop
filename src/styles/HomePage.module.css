@@ -88,6 +88,9 @@
     transition: background-color 0.3s ease;
     border-radius: 2px;
     font-weight: 600;
+    -webkit-box-shadow: 6px 10px 15px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 6px 10px 15px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 6px 10px 15px 0px rgba(0, 0, 0, 0.24);
   }
 
   .buttonKnowMore:hover {
@@ -95,11 +98,42 @@
     opacity: 0.8;
     font-weight: 600;
     color: #ffffff;
+    -webkit-box-shadow: 6px 10px 15px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 6px 10px 15px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 6px 10px 15px 0px rgba(0, 0, 0, 0.24);
+  }
+
+  .nosotros {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .contentBody {
+    background-size: cover;
+    background-color: #475a51;
+    padding: 129px 0;
+  }
+
+  .waveGenerator {
+    margin-top: 361px;
+  }
+
+  .contentUs {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+  }
+  .nosotros {
+    font-size: 3rem;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 500;
   }
 }
 
 /* mobile */
-@media only screen and (min-width: 360px) and (max-width: 769px) {
+@media only screen and (min-width: 330px) and (max-width: 769px) {
   .contentDivs {
     display: flex;
     flex-direction: column;
@@ -194,5 +228,26 @@
     opacity: 0.8;
     font-weight: 600;
     color: #ffffff;
+  }
+
+  .nosotros {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+
+  .contentBody {
+    clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
+    background: linear-gradient(to right, rgba(255, 147, 241, 0.6), #eecda3),
+      url("https://res.cloudinary.com/dg05pzjsq/image/upload/v1683921328/pexels-ovan-57690_lorcvx.jpg");
+    background-size: cover;
+    padding: 129px 0;
+    /* margin-top: -150px; */
+  }
+  .waveGenerator {
+    visibility: hidden;
+  }
+
+  .contentUs {
+    padding: 10px 20px;
   }
 }
