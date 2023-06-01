@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nimbus+Sans:wght@400;700&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,6 +19,7 @@ body {
 }
 
 body {
+  font-family: "Nimbus Sans", sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

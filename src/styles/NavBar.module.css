@@ -1,54 +1,6 @@
-/* mobile */
-/* @media only screen and (min-device-width: 480px) {
-  .burguerButton {
-    visibility: visible;
-  }
-} */
-/* tablets */
-/* @media only screen and (min-device-width: 768px) {
-  .contentNavBar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .contentNavBar {
-    list-style: none;
-  }
-  .image {
-    width: 170px;
-  }
-  .burguerButton {
-    visibility: hidden;
-  }
-} */
-/* Descktop */
-/* 
-@media only screen and (min-width: 769px) and (max-width: 1281px) {
-  .contentNavBar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .contentNavBar {
-    list-style: none;
-  }
-  .image {
-    width: 100px;
-  }
-  .burguerButton {
-    visibility: hidden;
-  }
-} */
-
 .contentLi {
   cursor: pointer;
 }
 .openModal {
   transition: transform 0.3s ease;
-}
-
-.contentLanguaje {
-  margin-left: 200px;
 }

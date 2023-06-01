@@ -1,14 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:700"); */
 
-/* html,
-body {
-  height: 100%;
-}
-
-body {
-  overflow: hidden;
-} */
 .contentLoader {
+  font-family: nimbus-sans, mono, sans-serif;
   background-color: rgb(230, 230, 230);
   z-index: 50000;
   width: 100%;
@@ -38,7 +31,7 @@ body {
   width: 280px;
   height: 280px;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   font-size: 1.2rem;
   line-height: 280px;
   -webkit-font-smoothing: antialiased;

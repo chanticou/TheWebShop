@@ -16,15 +16,16 @@
   }
 
   .title {
-    font-family: facultadregular, Georgia, sans-serif;
+    /* font-family: facultadregular, Georgia, sans-serif; */
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid orange;
     letter-spacing: 0.15em;
     font-weight: 400;
     position: absolute;
-    top: 35%;
+    top: 33%;
     left: 20px;
+    color: #1a202c;
     animation: typing 1s steps(40), blink-caret 0.5s step-end infinite;
   }
 
@@ -57,15 +58,17 @@
   }
 
   .subtitle {
-    font-family: facultadregular, Georgia, sans-serif;
+    /* font-family: facultadregular, Georgia, sans-serif; */
     margin-top: 25px;
     font-size: 1.5rem;
+    color: #1a202c;
   }
 
   .subtitleDos {
-    font-family: facultadregular, Georgia, sans-serif;
+    /* font-family: facultadregular, Georgia, sans-serif; */
     margin-top: 10px;
     font-size: 1.3rem;
+    color: #1a202c;
   }
 
   .divTwo {
@@ -78,7 +81,7 @@
   .divTwo img {
     width: 726px;
     margin-top: -30px;
-    height: 647px;
+    height: 509px;
   }
   .buttonKnowMore {
     background-color: transparent;
@@ -148,7 +151,7 @@
   }
 
   .title {
-    font-family: facultadregular, Georgia, sans-serif;
+    /* font-family: facultadregular, Georgia, sans-serif; */
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid orange;
@@ -194,14 +197,14 @@
     /* otros estilos... */
   }
   .subtitle {
-    font-family: facultadregular, Georgia, sans-serif;
+    /* font-family: facultadregular, Georgia, sans-serif; */
     margin-top: 25px;
     font-size: 1.5rem;
     text-align: center;
   }
 
   .subtitleDos {
-    font-family: facultadregular, Georgia, sans-serif;
+    /* font-family: facultadregular, Georgia, sans-serif; */
     margin-top: 10px;
     text-align: center;
     font-size: 1.3rem;

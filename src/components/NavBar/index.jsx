@@ -84,10 +84,10 @@ export const NavBar = () => {
   return (
     <>
       <div>
-        <nav className="w-full  sticky top-0 left-0 right-0 z-10">
+        <nav className="w-full fixed top-0 left-0 right-0 z-10">
           <div className="justify-center px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
             <div>
-              <div className="flex items-center justify-between py-3 md:py-5 md:block">
+              <div className="flex fixed items-center justify-between py-3 md:py-5 md:block">
                 {/* LOGO */}
 
                 {/* HAMBURGER BUTTON FOR MOBILE */}
@@ -114,7 +114,7 @@ export const NavBar = () => {
                 <ul className="p-0 md:h-auto items-center justify-justify-between md:flex ">
                   <div className={styles.contentLi}>
                     <li
-                      className="text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent"
+                      className="text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent text-gray-900"
                       onClick={() => {
                         nosotrosRef.current.scrollIntoView({
                           behavior: "smooth",
@@ -127,7 +127,7 @@ export const NavBar = () => {
                   </div>
                   <div className={styles.contentLi}>
                     <li
-                      className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent"
+                      className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent text-gray-900"
                       onClick={() => {
                         setNavbar(!navbar);
                         nosotrosRef.current.scrollIntoView({
@@ -151,18 +151,34 @@ export const NavBar = () => {
                     />
                   </Link>
                   <div className={styles.contentLi}>
-                    <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                    <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent text-gray-900">
                       <Link href="#contact" onClick={() => setNavbar(!navbar)}>
                         <div data-aos="fade-left">{changeLanguaje.contact}</div>
                       </Link>
                     </li>
                   </div>
                   <div className={styles.contentLi}>
-                    <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                    <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent text-gray-900">
                       <Link href="#projects" onClick={() => setNavbar(!navbar)}>
                         <div data-aos="fade-left">
-                          {" "}
-                          {changeLanguaje.proyect}
+                          <div className={styles.contentLanguaje}>
+                            <label>Idioma</label>
+                            <select
+                              style={{
+                                backgroundColor: "transparent",
+                                cursor: "pointer",
+                              }}
+                              onChange={(e) => handleChangeLanguaje(e)}
+                            >
+                              {languaje.map((el) => {
+                                return (
+                                  <option key={el.code} value={el.code}>
+                                    {el.name}
+                                  </option>
+                                );
+                              })}
+                            </select>
+                          </div>
                         </div>
                       </Link>
                     </li>
@@ -172,21 +188,7 @@ export const NavBar = () => {
             </div>
           </div>
         </nav>
-        <div className={styles.contentLanguaje}>
-          <label>Idioma</label>
-          <select
-            style={{ backgroundColor: "transparent", cursor: "pointer" }}
-            onChange={(e) => handleChangeLanguaje(e)}
-          >
-            {languaje.map((el) => {
-              return (
-                <option key={el.code} value={el.code}>
-                  {el.name}
-                </option>
-              );
-            })}
-          </select>
-        </div>
+
         <HomePage
           navbar={navbar}
           changeLanguaje={changeLanguaje}
