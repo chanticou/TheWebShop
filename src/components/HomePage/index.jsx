@@ -16,8 +16,8 @@ export const HomePage = ({ navbar, changeLanguaje, nosotrosRef }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowClass(true);
-    }, 3000); // 3000 milisegundos = 3 segundos
-    AOS.init(); // Inicializar la biblioteca AOS
+    }, 3000);
+    AOS.init();
     if (languajes) {
       const titleText = `${changeLanguaje.customWebsites}`;
       let i = 0;

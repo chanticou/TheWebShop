@@ -48,3 +48,7 @@
 .openModal {
   transition: transform 0.3s ease;
 }
+
+.contentLanguaje {
+  margin-left: 200px;
+}

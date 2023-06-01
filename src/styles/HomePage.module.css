@@ -61,6 +61,7 @@
     margin-top: 25px;
     font-size: 1.5rem;
   }
+
   .subtitleDos {
     font-family: facultadregular, Georgia, sans-serif;
     margin-top: 10px;
@@ -139,9 +140,6 @@
     flex-direction: column;
   }
   .divOne {
-    /* width: 50%;
-    position: absolute;
-    top: 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,11 +154,11 @@
     border-right: 0.15em solid orange;
     letter-spacing: 0.15em;
     font-weight: 400;
-    position: absolute;
+    position: relative;
     width: 226px;
     left: 20px;
     animation: typing 1s steps(40), blink-caret 0.5s step-end infinite;
-    top: 413px;
+    top: 70px;
     font-size: 0.7rem;
   }
 
@@ -191,7 +189,10 @@
       opacity: 1;
     }
   }
-
+  .divTwo {
+    position: relative;
+    /* otros estilos... */
+  }
   .subtitle {
     font-family: facultadregular, Georgia, sans-serif;
     margin-top: 25px;
@@ -236,12 +237,8 @@
   }
 
   .contentBody {
-    clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
-    background: linear-gradient(to right, rgba(255, 147, 241, 0.6), #eecda3),
-      url("https://res.cloudinary.com/dg05pzjsq/image/upload/v1683921328/pexels-ovan-57690_lorcvx.jpg");
     background-size: cover;
-    padding: 129px 0;
-    /* margin-top: -150px; */
+    background-color: #475a51;
   }
   .waveGenerator {
     visibility: hidden;
@@ -249,5 +246,16 @@
 
   .contentUs {
     padding: 10px 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+    text-align: justify;
+  }
+
+  .nosotros {
+    font-size: 3rem;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 500;
   }
 }

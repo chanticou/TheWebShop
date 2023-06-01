@@ -170,28 +170,23 @@ export const NavBar = () => {
                 </ul>
               </div>
             </div>
-            <div
-              style={{
-                position: "absolute",
-                right: "20px",
-              }}
-            >
-              <label style={{ marginRight: "10px" }}>Idioma</label>
-              <select
-                style={{ backgroundColor: "transparent", cursor: "pointer" }}
-                onChange={(e) => handleChangeLanguaje(e)}
-              >
-                {languaje.map((el) => {
-                  return (
-                    <option key={el.code} value={el.code}>
-                      {el.name}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
           </div>
         </nav>
+        <div className={styles.contentLanguaje}>
+          <label>Idioma</label>
+          <select
+            style={{ backgroundColor: "transparent", cursor: "pointer" }}
+            onChange={(e) => handleChangeLanguaje(e)}
+          >
+            {languaje.map((el) => {
+              return (
+                <option key={el.code} value={el.code}>
+                  {el.name}
+                </option>
+              );
+            })}
+          </select>
+        </div>
         <HomePage
           navbar={navbar}
           changeLanguaje={changeLanguaje}

@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "@/styles/WabeGenerator.module.css";
 
 export const WaveGenerator = () => (
-  <div style={{ height: "150px", overflow: "hidden" }}>
+  <div className={styles.contentWabeGenerator}>
     <svg
       viewBox="0 0 500 150"
       preserveAspectRatio="none"

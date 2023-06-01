@@ -1,0 +1,17 @@
+/* Descktop */
+@media only screen and (min-width: 769px) and (max-width: 2000px) {
+  .svgWave {
+    visibility: visible;
+    height: 100%;
+    width: 50%;
+    margin-left: 645px;
+    margin-top: -129px;
+  }
+}
+
+/* mobile */
+@media only screen and (min-width: 330px) and (max-width: 769px) {
+  .svgWave {
+    visibility: hidden;
+  }
+}

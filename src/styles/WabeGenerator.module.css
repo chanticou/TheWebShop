@@ -1,0 +1,15 @@
+/* Descktop */
+@media only screen and (min-width: 769px) and (max-width: 2000px) {
+  .contentWabeGenerator {
+    height: 150px;
+    overflow: hidden;
+  }
+}
+
+/* mobile */
+@media only screen and (min-width: 330px) and (max-width: 769px) {
+  .contentWabeGenerator {
+    visibility: hidden;
+    margin-top: -52px;
+  }
+}
