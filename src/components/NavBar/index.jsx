@@ -3,16 +3,20 @@ import Link from "next/link";
 import React, { useState, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HomePage } from "../HomePage";
+import { Footer } from "../Footer";
 import styles from "@/styles/NavBar.module.css";
 import "tailwindcss/tailwind.css";
 
 export const NavBar = () => {
   const nosotrosRef = useRef(null);
+  const solutionsRef = useRef(null);
+  const contactoRef = useRef(null);
+
   // Traducciones en diferentes idiomas
   const translations = {
     es: {
       us: "Nosotros",
-      blogs: "Blogs",
+      solutions: "Soluciones",
       contact: "Contacto",
       proyect: "Proyectos",
       design: "Diseño",
@@ -23,7 +27,7 @@ export const NavBar = () => {
     },
     en: {
       us: "Us",
-      blogs: "Blogs",
+      solutions: "solutions",
       contact: "Contact",
       proyect: "Projects",
       design: "Design",
@@ -35,7 +39,7 @@ export const NavBar = () => {
     },
     fr: {
       us: "Nous",
-      blogs: "Blogs",
+      solutions: "solution",
       contact: "Contact",
       proyect: "Projets",
       design: "Conception",
@@ -51,7 +55,7 @@ export const NavBar = () => {
 
   const [changeLanguaje, setChangeLanguaje] = useState({
     us: "Nosotros",
-    blogs: "Blogs",
+    solutions: "Soluciones",
     contact: "Contacto",
     proyect: "Proyectos",
     design: "Diseño",
@@ -108,7 +112,7 @@ export const NavBar = () => {
             <div>
               <div
                 className={`flex-1 justify-self-center pb-3 md:block md:pb-0 md:mt-0 ${
-                  navbar ? "openModal p-12 md:p-0 block z-50" : "hidden"
+                  navbar ? "openModal p-12 md:p-0 block z-50 " : "hidden"
                 }`}
               >
                 <ul className="p-0 md:h-auto items-center justify-justify-between md:flex ">
@@ -129,32 +133,37 @@ export const NavBar = () => {
                     <li
                       className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent text-gray-900"
                       onClick={() => {
-                        setNavbar(!navbar);
-                        nosotrosRef.current.scrollIntoView({
+                        solutionsRef.current.scrollIntoView({
                           behavior: "smooth",
                           block: "start",
                         });
                       }}
                     >
-                      <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                        <div data-aos="fade-right"> {changeLanguaje.blogs}</div>
-                      </Link>
+                      <div data-aos="fade-right">
+                        {changeLanguaje.solutions}
+                      </div>
                     </li>
                   </div>
-                  <Link href="/">
-                    <Image
-                      className="m-auto hidden md:block"
-                      src="/logo1png.png"
-                      width={150}
-                      height={30}
-                      alt="logo"
-                    />
-                  </Link>
+
+                  <Image
+                    className="m-auto hidden md:block"
+                    src="/logo1png.png"
+                    width={150}
+                    height={30}
+                    alt="logo"
+                  />
+
                   <div className={styles.contentLi}>
-                    <li className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent text-gray-900">
-                      <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                        <div data-aos="fade-left">{changeLanguaje.contact}</div>
-                      </Link>
+                    <li
+                      className="text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent text-gray-900"
+                      onClick={() => {
+                        contactoRef.current.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }}
+                    >
+                      <div data-aos="fade-left">{changeLanguaje.contact}</div>
                     </li>
                   </div>
                   <div className={styles.contentLi}>
@@ -193,7 +202,9 @@ export const NavBar = () => {
           navbar={navbar}
           changeLanguaje={changeLanguaje}
           nosotrosRef={nosotrosRef}
+          solutions={solutionsRef}
         />
+        <Footer contactoRef={contactoRef} />
       </div>
     </>
   );

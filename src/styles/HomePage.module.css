@@ -2,6 +2,7 @@
 @media only screen and (min-width: 769px) and (max-width: 2000px) {
   .contentDivs {
     display: flex;
+    height: 22vh;
     flex-direction: row;
   }
   .divOne {
@@ -81,7 +82,7 @@
   .divTwo img {
     width: 726px;
     margin-top: -30px;
-    height: 509px;
+    height: 652px;
   }
   .buttonKnowMore {
     background-color: transparent;
@@ -110,12 +111,17 @@
   .nosotros {
     text-align: center;
     font-size: 2rem;
+    margin-top: -150px;
+    font-size: 3rem;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 500;
   }
 
   .contentBody {
     background-size: cover;
     background-color: #475a51;
-    padding: 129px 0;
+    padding: 155px 0;
   }
 
   .waveGenerator {
@@ -123,16 +129,14 @@
   }
 
   .contentUs {
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
     color: #ffffff;
   }
-  .nosotros {
-    font-size: 3rem;
-    margin-left: 20px;
-    color: #ffffff;
-    font-weight: 500;
+
+  .contentUs p {
+    margin-top: 30px;
   }
 }
 
@@ -260,5 +264,9 @@
     margin-left: 20px;
     color: #ffffff;
     font-weight: 500;
+  }
+
+  .moveDiv {
+    margin-top: 250px;
   }
 }

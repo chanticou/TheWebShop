@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "@/styles/Footer.module.css";
 
-export const Footer = () => {
+export const Footer = ({ contactoRef }) => {
   return (
     <>
-      <div className={styles.contentFooter}>
+      <div ref={contactoRef} className={styles.contentFooter}>
         <div className={styles.firstLineGrey}></div>
         <div className={styles.contentDivsFooter}>
           <div className={styles.contentLeft}>

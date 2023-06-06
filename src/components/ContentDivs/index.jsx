@@ -6,10 +6,10 @@ import { BsCloudUpload } from "react-icons/bs";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import styles from "@/styles/ContentDivs.module.css";
 
-export const ContentDivs = () => {
+export const ContentDivs = ({ solutions }) => {
   return (
     <>
-      <div className={styles.contentdivs}>
+      <div ref={solutions} className={styles.contentdivs}>
         <div className={styles.contentCards}>
           <div className={styles.contentIcon}>
             <IoIosAirplane className={styles.icon} />

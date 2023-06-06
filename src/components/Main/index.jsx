@@ -15,8 +15,8 @@ export const Main = () => {
         <Loader />
         <NavBar />
         <WhatsAppLink />
-        <ContentDivs />
-        <Footer />
+        {/* <ContentDivs /> */}
+        {/* <Footer /> */}
       </div>
     </>
   );
