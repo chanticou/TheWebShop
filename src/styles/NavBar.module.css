@@ -9,11 +9,18 @@
   position: fixed;
   width: 122%;
   padding: 62px 44px;
-  background-color: #000000;
+
+  background: linear-gradient(
+    0deg,
+    rgba(129, 131, 130, 0.2),
+    rgba(39, 39, 39, 0.3),
+    rgba(17, 17, 16, 0.4),
+    rgba(1, 1, 1, 0.5)
+  );
   opacity: 0;
   transition: 0.2s ease; /* Agrega la propiedad de transición */
 }
 
 .navbarTransparent.active {
-  opacity: 0.6; /* Cambia la opacidad al valor deseado */
+  opacity: 0.8; /* Cambia la opacidad al valor deseado */
 }
