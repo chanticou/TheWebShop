@@ -4,3 +4,16 @@
 .openModal {
   transition: transform 0.3s ease;
 }
+.navbarTransparent {
+  z-index: 50000000000000000000;
+  position: fixed;
+  width: 122%;
+  padding: 62px 44px;
+  background-color: #000000;
+  opacity: 0;
+  transition: 0.2s ease; /* Agrega la propiedad de transición */
+}
+
+.navbarTransparent.active {
+  opacity: 0.6; /* Cambia la opacidad al valor deseado */
+}

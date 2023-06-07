@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HomePage } from "../HomePage";
 import { Footer } from "../Footer";
@@ -11,6 +11,8 @@ export const NavBar = () => {
   const nosotrosRef = useRef(null);
   const solutionsRef = useRef(null);
   const contactoRef = useRef(null);
+
+  const [scroll, setScroll] = useState(false);
 
   // Traducciones en diferentes idiomas
   const translations = {
@@ -84,10 +86,24 @@ export const NavBar = () => {
       }
     }
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <div>
+      <div
+        className={scroll ? `${styles.navbarTransparent} ${styles.active}` : ""}
+      >
         <nav className="w-full fixed top-0 left-0 right-0 z-10">
           <div className="justify-center px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
             <div>
@@ -197,15 +213,15 @@ export const NavBar = () => {
             </div>
           </div>
         </nav>
-
-        <HomePage
-          navbar={navbar}
-          changeLanguaje={changeLanguaje}
-          nosotrosRef={nosotrosRef}
-          solutions={solutionsRef}
-        />
-        <Footer contactoRef={contactoRef} />
       </div>
+
+      <HomePage
+        navbar={navbar}
+        changeLanguaje={changeLanguaje}
+        nosotrosRef={nosotrosRef}
+        solutions={solutionsRef}
+      />
+      <Footer contactoRef={contactoRef} />
     </>
   );
 };
